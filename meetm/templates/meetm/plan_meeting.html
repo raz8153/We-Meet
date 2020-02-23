@@ -1,0 +1,57 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./materialize_min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+</head>
+<body>
+    <nav class="nav-wrapper">
+        <div class="container">
+            <a href="/" class="brand-logo">WeMeet</a>
+            <ul class="right">
+                <li><a href="#">Sign Out</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="section">
+        <div class="container">
+            <h3>Plan a Meetup</h3>
+            <form action="">
+                <div class="input-field">
+                    <label for="">Theme of the meetup(optional)</label>
+                    <input type="text">
+                </div>
+                <div class="input-field">
+                    <label for="">Location</label>
+                    <input type="text">
+                </div>
+                <div class="input-field">
+                    <label for="">Venue</label>
+                    <input type="text">
+                </div>
+                <div class="input-field">
+                    <label for="">Time</label>
+                    <input type="text">
+                </div>
+                <!-- <div class="input-field">
+                    <label for="">No. of attendies</label>
+                    <input type="text">
+                </div> -->
+                <div class="input-field">
+                    <input class="btn red" type="button" value="Plan the meetup">
+                </div>
+                
+            </form>
+        </div>
+    </section>
+
+    <script src="./materialize_min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    
+</body>
+</html>

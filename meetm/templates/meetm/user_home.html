@@ -1,0 +1,108 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'material.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Users</title>
+</head>
+
+<body>
+    <nav class="nav-wrapper">
+        <div class="container">
+            <a href="/" class="brand-logo">WeMeet</a>
+            <ul class="right">
+                <li><a href="#">Sign Out</a></li>
+                <li><a href="#">Blah</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="section">
+        <div class="container">
+            <div class="row">
+                <div class="row">
+                    <div class="col s12">
+                        <ul class="tabs">
+                            <li class="tab col s4"><a class="active" href="#meetup">Meetups</a></li>
+                            <li class="tab col s4"><a href="#refs">References</a></li>
+                            <li class="tab col s4"><a href="#psycho">Psychologists</a></li>
+                        </ul>
+                    </div>
+                    <div id="meetup" class="col s12">
+                        <h3>Meetups</h3>
+
+                        <ul class="collection">
+                            {% for meetup_1 in meetup %}
+                            <li class="collection-item avatar">
+                                <i class="material-icons red lighten-2 circle">location_on</i>            
+                                    
+                                        <h4>THEME :{{ meetup_1.Theme }}</h4>
+                                        <p>CITY : {{ meetup_1.City }}</p>
+                                        <p> VENUE :{{ meetup_1.Venue }}</p>
+                                        <p> TIME :{{ meetup_1.Time }}</p>
+                                        <p> MODERATOR :{{ meetup_1.MOderator }}</p>
+                                        
+                                        <a href="#" class="secondary-content"><i class="material-icons">grade</i></a>
+                                        {% endfor %}
+                            </li>
+                        </ul>
+
+                    </div>
+                    <div id="refs" class="col s12">
+                        <h2>References</h2>
+                        <h4>Popular and Recommended books</h4>
+
+                        
+  <div class="row">
+        <div class="col s12 m4">
+          <div class="card">
+            <div class="card-image">
+              <img src="./assets/user_home_img/book1.jpg">
+              <span class="card-title">Card Title</span>
+              <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
+            </div>
+            <div class="card-content">
+              <p>The Power of Positivity</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+                    </div>
+                    <div id="psycho" class="col s12">
+                        <h3>Psychologists</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi rem quisquam itaque quod
+                            atque vel deserunt culpa eligendi dolor, eaque alias magnam ut vitae aspernatur
+                            necessitatibus aperiam voluptates at ab.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('ul.tabs').tabs();
+        });
+        $(document).ready(function () {
+            $('ul.tabs').tabs('select_tab', 'tab_id');
+        });
+    </script>
+</body>
+
+</html>

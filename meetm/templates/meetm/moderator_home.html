@@ -1,0 +1,79 @@
+
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'material.css' %}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel="stylesheet" href="{% static 'styles.css' %}">
+  <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <title>Moderator_home</title>
+  <link rel="stylesheet" href="{% static 'materials.css' %}">
+  <!-- <link rel="stylesheet" href="{% static 'material.css' %}"> -->
+</head>
+<body>
+  <nav class="nav-wrapper">
+    <div class="container">
+      <a href="#" class="brand-logo">WeMeet</a>
+      <ul class="right">
+        <li><a href="#">Sign Out</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="section container scrollspy" id="photos">
+    <div class="row">
+      <div class="col s12 l4">
+        <img src="assets/calendar.jpg" class='responsive-img materialboxed' alt="calendar">
+      </div>
+      <div class="col s12 l6 offset-l1">
+        <h2 class="red-text text-darken-4">Plan New Meetup</h2>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisi nesciunt?</p>
+        <a href="./plan_meeting" class="btn red darken-1">Plan </a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col s12 l4 push-l8">
+        <img src="assets/photo-of-people-holding-each-other-s-hands-3184423.jpg" class='responsive-img materialboxed' alt="people holding hands">
+      </div>
+      <div class="col s12 l6 offset-l1 pull-l5 right-align">
+        <h2 class="red-text text-darken-4 modal-trigger">Upcoming meetups</h2>
+        <p>View the list of upcoming meetups</p>
+        <a href="#" class="btn red darken-1">View</a>
+        </div>
+    </div>
+    <div class="row">
+      <div class="col s12 l4">
+        <img src="assets/at-a-parade.jpeg" class='responsive-img materialboxed' alt="parade image">
+      </div>
+      <div class="col s12 l6 offset-l1">
+        <h2 class="red-text text-darken-4">Past Meetups</h2>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisi nesciunt?</p>
+        <a data-target="past" class="btn modal-trigger red darken-1">Past Events</a>
+      </div>
+    </div>
+
+
+    <div class="modal" id="past">
+      <div class="modal-content">
+        <h4>Past Events</h4>
+      </div>
+    </div>
+
+  </section>
+
+
+  <script src="./materialize_min.js"></script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+   
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(()=>{
+      $('.modal').modal()
+    })
+  </script>
+</body>
+</html>

@@ -1,0 +1,108 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static './assets/style.css' %}">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> -->
+    <!-- <link rel="stylesheet" href="{% static 'styles.css' %}"> -->
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>signup</title>
+    <style>
+
+        *{
+    margin:0;
+    padding:0;
+}
+
+.box{
+    display:grid;
+    grid-template-columns: 50% 50%;
+    
+    position:absolute;
+    left:15%;
+    top:14%;
+    width: 1000px;
+    height:550px;
+    box-shadow:10px 10px 10px 15px rgb(221, 220, 220);
+}
+.box input[type="text"],.box input[type="password"]{
+    margin:5px;
+    outline:none;
+    border:1px solid rgb(204, 197, 197);
+    border-radius: 24px;
+    padding:13px 85px;
+    background: none;
+    
+}
+.box input[type="text"]:focus,.box input[type="password"]:focus{
+    border:1px solid rgb(248, 40, 12);
+    outline:none;
+    border-radius: 24px;    
+}
+.box input[type="submit"]{
+    background: rgb(248, 40, 12);
+    outline:none;
+    padding: 10px 30px;
+    padding-left:25px;
+    border-radius:24px;
+    color:white;
+    font-family: cursive;
+    letter-spacing: 2px;
+    border: 1px solid rgb(248, 40, 12);
+}
+.box input[type="submit"]:focus{
+    
+    
+    width:200px;
+    font-weight: bolder;
+}
+
+h1{
+    font-size:50px;
+    font-family:Courier;
+}
+h5{
+    font-size:15px;
+    font-weight:lighter;
+    letter-spacing: 1px;
+    font-family: cursive;
+}
+
+.sidepage{
+    background-image: url("sidepage.jpg"); 
+    background-size:cover;
+    text-align: center;
+    padding:8%;
+    padding-top:40%;
+}
+.signup{
+    padding-top:15%;
+}
+
+    </style>
+</head>
+<body>
+    
+    <div class="box">
+        <div class="sidepage">
+            <h1><b>Hi There!</b></h1><br>
+            <h5>Enter your details and start journey with us</h5><br>
+        </div>
+        <div class="signup">
+            <h1>Sign up</h1><br><br>
+            <form>
+                <input type="text" id="name" name="name" placeholder="Your Name "><i class="material-icons">tag_faces</i><br>
+                <input type="text" id="place" name="place" placeholder="Where do you live(City)"><i class="material-icons">place</i><br>
+                <input type="text" id="email" name="email" placeholder="Your Email Id"><i class="material-icons">email</i><br>               
+                <input type="text" id="uname" name="uname" placeholder="Username"><i class="material-icons">person</i><br>
+                <input type="password" id="Password" name="Password" placeholder="Password"><i class="material-icons">lock</i><br><br>
+                <input type="submit" placeholder="Submit">
+            </form>
+        </div>
+    </div>
+</body>
+</html>

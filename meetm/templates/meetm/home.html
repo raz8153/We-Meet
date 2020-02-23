@@ -1,0 +1,240 @@
+{% load static  %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+	<link rel="stylesheet" href="{% static 'styles.css' %}">
+	<link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<title>WeMeet</title>
+</head>
+
+<body>
+	<header >
+		<nav class="nav-wrapper transparent z-depth-0">
+			<div class="container">
+				<a href="#" data-target="mobile-nav" class=" large sidenav-trigger"><i
+						class="material-icons large">account_circle</i></a>
+				<ul class="right hide-on-med-and-down">
+					<li><a href="#logIn" class=" modal-trigger brown lighten-3 btn-large">Log In</a></li>
+                    <li><a href="./user_signup" class=" black-text">Sign Up</a></li>
+				</ul>
+			</div>
+		</nav>
+		<div class="row">
+			<div class="col s5"></div>
+			<!-- <div class="col s5 pull-s1 push-l1 brand-logo"> -->
+			<div class="center brand-logo"></div>
+				<h1 style="font-size:82" class="brown-text text-darken-4 title">WeMeet</h1>
+				<h4 class="brown-text center">To Rediscover Yourself</h2>
+			</div>
+		</div>
+
+		<ul id="landing-page" class="sidenav brown lighten-4" id="mobile-nav">
+			<li><a href="#logIn" class="modal-trigger">Log In</a></li>
+			<li><a href="./user_signup" class=" black-text">Sign Up</a></li>
+		</ul>
+
+		<!-- LogIn Modal -->
+		<div id="logIn" class="modal brown lighten-5">
+			<form class="modal-content">
+				<div class="input-field">
+					<input type="text" id="name">
+					<label class="active" for="name">Name</label>
+				</div>
+				<div class="input-field">
+					<input type="email" id="email" class="validate">
+					<label class="active" for="email">Email</label>
+				</div>
+				 <a href="./user_home" class="btn">Log In</a>
+				 <a href="./moderator_home" class="btn">Log In as Moderator</a>
+			</form>
+		</div>
+
+		<!-- SignUp Modal -->
+		<!-- <div id="signUp" class="modal brown lighten-5">
+			<form class="modal-content">
+				<div class="input-field">
+					<input type="text" id="name">
+					<label class="active" for="name">Name</label>
+				</div>
+				<div class="input-field">
+					<input type="email" id="email" class="validate">
+					<label class="active" for="email">Email</label>
+				</div>
+
+				<div class="input-field">
+					<input type="text" id="password1">
+					<label for="password1" class="active">Enter Password</label>
+				</div>
+
+				<div class="input-field">
+					<input type="password" id="password2">
+					<label for="password2" class="active">Confirm Passowrd</label>
+				</div>
+				<input type="button" class="btn brown center" value="Sign Up">
+			</form>
+		</div> -->
+	</header>
+
+
+	<!-- Fixed floating action button -->
+	<div class="fixed-action-btn">
+		<a class="btn-floating btn-large brown"><i class="large material-icons">menu</i></a>
+		<ul>
+			<li><a href="#landing-page" data-tooltip="Home" class="tooltipped btn-floating red lighten-2 btn-large"><i
+						class="large material-icons">home</i></a></li>
+			<li><a href="#search-bar" data-tooltip="Search" class="tooltipped btn-floating blue lighten-2 btn-large"><i
+						class="large material-icons">search</i></a></li>
+			<li><a href="#top-orders" data-tooltip="Top Orders" class="tooltipped btn-floating orange lighten-1 btn-large"><i
+						class="large material-icons">shopping_cart</i></a></li>
+			<li><a href="#features" data-tooltip="Our Features" class="tooltipped btn-floating brown btn-large"><i
+						class="large material-icons">star</i></a></li>
+			<li><a href="#contact" data-tooltip="Contact Us" class="tooltipped btn-floating teal btn-large"><i
+						class="large material-icons">contact_mail</i></a></li>
+		</ul>
+	</div>
+
+	<!-- Features -->
+	<section class="section" id="features">
+		<div class="container">
+			<h2>Our Features</h2>
+			<div class="row">
+				<div class="col s12 m4">
+					<div class="card-panel center brown lighten-4">
+						<i class="material-icons large ">people_alt</i>
+						<h4>Support group meetups</h4>
+						<!-- <p></p> -->
+					</div>
+				</div>
+				<div class="col s12 m4">
+					<div class="card-panel center brown lighten-4">
+						<i class="material-icons large ">person</i>
+						<h4>Find Psycologists near you</h4>
+						<!-- <p>We accept Google Pay, PayTm, Rupay & all other online currencies</p> -->
+					</div>
+				</div>
+				<div class="col s12 m4">
+					<div class="card-panel center brown lighten-4">
+						<i class="material-icons large ">menu_book</i>
+						<h4>Entertaiment suggestions</h4>
+						<!-- <p>If we are late by more than 30 minutes, you get your whole order for free!</p> -->
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+
+	<!-- Slider -->
+	<section>
+		<div class="slider">
+			<ul class="slides ">
+				<li>
+					<img src="assets/dandelion.jpg">
+					<div class="caption right-align white-text text-darken-4 ">
+						<h2 class="push-l2 grey-text text-darken-4">Let go of your worries</h2>
+						<h5 class="light grey-text text-darken-4 hide-on-small-only">Lorem ipsum dolor sit amet
+							consectetur adipisicing elit. Possimus delectus inventore neque impedit</h5>
+					</div>
+				</li>
+				<li>
+					<img src="assets/photo-of-holding-hands-1773113.jpg">
+					<div class="caption left-align white-text text-darken-4 ">
+						<h3>Support each other</h3>
+						<h6 class="light grey-text text-lighten-3 hide-on-small-only">Lorem ipsum dolor sit amet
+							consectetur adipisicing elit. Sunt ipsum molestias excepturi doloremque</h6>
+					</div>
+				</li>
+				<li>
+					<img src="assets/people.jpg" alt="" srcset="">
+					<div class="caption center-align black-text text-darken-4 ">
+						<h2>Open Up to decrease your worries</h2>
+						<h5 class="light grey-text text-lighten-3 hide-on-small-only brown-text text-darken-3 ">Lorem
+							ipsum dolor sit amet
+							consectetur adipisicing elit. Quidem, provident eos dicta unde debitis</h5>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</section>
+	<!-- Parallax -->
+	<section class="section">
+		<div class="parallax-container">
+			<div class="parallax">
+				<img src="img/group.jpg" alt="" class="responsive-img">
+			</div>
+		</div>
+	</section>
+
+
+
+	<!-- <footer class="section brown darken-2 white-text center">
+    <p class="flow-text">FoodArena &copy; 2020 </p>
+  </footer> -->
+
+
+	<footer class="page-footer brown darken-2" id="contact">
+		<div class="container">
+			<div class="row">
+				<div class="col s12 l6">
+					<h4>About WeMeet</h4>
+					<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis doloremque numquam amet vitae
+						qui rerum
+						ex oe!</p>
+					<p>Lorem sit, amet cetur adipisicing elit. Corporis doloremque numquam amet vitae qui rerum ex
+						officiis
+						tempore ad dolore!</p>
+				</div>
+				<div class="col s12 l4 offset-l2">
+					<h4>Connect</h4>
+					<ul>
+						<li><a class="grey-text text-lighten-4" href="">Facebook</a></li>
+						<li><a class="grey-text text-lighten-4" href="">Twitter</a></li>
+						<li><a class="grey-text text-lighten-4" href="">Instagram</a></li>
+						<li><a class="grey-text text-lighten-4" href="">LinkedIn</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="footer-copyright brown darken-4">
+			<div class="container center">&copy; 2019 WeMeet</div>
+		</div>
+	</footer>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+	<script>
+		$(document).ready(() => {
+			$('.modal').modal()
+			$('.sidenav').sidenav();
+			$('.fixed-action-btn').floatingActionButton({
+				hoverEnabled: false
+			});
+			$('.tooltipped').tooltip();
+			$('input.autocomplete').autocomplete({
+				data: {
+					"Appam": null,
+					"Biriyani": null,
+					"Noodles": 'https://placehold.it/250x250'
+				},
+			});
+			$('.slider').slider({
+
+				full_width: true,
+				height: 650, // default - height : 400
+				interval: 8000 // default - interval: 6000
+			});
+			$('.parallax').parallax();
+			$('.materialboxed').materialbox();
+
+		})
+	</script>
+
+</body>
+
+</html>
