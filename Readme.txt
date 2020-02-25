@@ -1,1 +1,1 @@
-may the force be with u 
+WeMeet : In our community , mental distress or depression is not treated with same importance as a physical ailment. Its considered to be a sign of weakness to approach a psychologist. People with anxiety and depression  struggle a lot to open up with someone due to these reasons. The WeMeet app lets a user talk about his/her problems and causes of distress and get the satisfaction of opening up , also receive moral support and advice from other users. This app encourages users to utilise support groups with help of moderators (Psychologists) .
